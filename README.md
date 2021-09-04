@@ -22,7 +22,10 @@ Doctor Interface:
 2. Patient Dashboard : There will be a dashboard page wherein all the necessary information about the patient will be visible to the doctor. The doctor can generate meeting link and can send it to patient via mail. From here, he can also send the weekly set of questions to the patient. He can also keep the track of the summary report in the form of graph for his own reference.
 
 
+
+
 Tech Stack :
+
 Frontend : HTML, CSS, JavaScript
 
 Backend : Flask (Python)
