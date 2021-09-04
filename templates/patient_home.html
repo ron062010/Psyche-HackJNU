@@ -1,0 +1,471 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
+  <link rel="icon" type="image/png" href="../assets/img/favicon.png">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>
+   Patient Home
+  </title>
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+  <!--     Fonts and icons     -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+  <!-- CSS Files -->
+  <link href="/static/bootstrap.min.css" rel="stylesheet" />
+  <link href="/static/paper-dashboard.css" rel="stylesheet" />
+  <!-- CSS Just for demo purpose, don't include it in your project -->
+  <link href="../assets/demo/demo.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=Signika' rel='stylesheet'>
+  <style>
+    .button_slide {
+  color: black ;
+  border: 2px solid rgb(136, 186, 233);
+  border-radius: 10px;
+  display: inline-block;
+  font-size: 14px;
+  height: 100px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  box-shadow: inset 0 0 0 0 #7ea2e6;
+  -webkit-transition: ease-out 0.4s;
+  -moz-transition: ease-out 0.4s;
+  transition: ease-out 0.4s;
+}
+
+.slide_down:hover {
+  box-shadow: inset 0 300px 0 0 #86c7ec;
+}
+    body {
+        font-family: 'Signika';
+    }
+    </style>
+    
+</head>
+
+<body>
+  <div class="wrapper ">
+    <div class="sidebar" data-color="white" data-active-color="danger">
+      <div class="sidebar-wrapper">
+        <ul class="nav">
+          <li class="active ">
+            <a href="patient_home" class="one">
+              <i class="fas fa-home" style="color: black;"></i>
+              <p>Dashboard</p>
+            </a>
+          </li>
+          <li>
+            <a href="doctor_list" class="one">
+              <i class="fas fa-list-ul" style="color: black;"></i>
+              <p>Doctor List</p>
+            </a>
+          </li>
+          <li>
+            <a href="request_status">
+              <i class="far fa-comment-alt" style="color: black;"></i>
+              <p>Request Status</p>
+            </a>
+          </li>
+          <li>
+            <a href="weekly_analysis">
+              <i class="far fa-chart-bar" style="color: black;"></i>
+              <p>Weekly Analysis</p>
+            </a>
+          </li>
+          <li>
+            <a href="voice_notes">
+              <i class="fas fa-microphone-alt" style="color: black;"></i>
+              <p>Send Voice Note</p>
+            </a>
+          </li>
+          <li>
+            <a href="payment">
+              <i class="fab fa-cc-mastercard" style="color: black;"></i>
+              <p>Payments</p>
+            </a>
+          </li>
+          <li>
+            <a href="logout_patient">
+              <i class="fas fa-sign-out-alt" style="color: black;"></i>
+             
+              <p>Logout</p>
+            </a>
+          </li>
+          <li>
+        </ul>
+      </div>
+    </div>
+    <div class="main-panel">
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg navbar-absolute fixed-top navbar-transparent">
+        <div class="container-fluid">
+          <div class="navbar-wrapper">
+            <div class="navbar-toggle">
+              <button type="button" class="navbar-toggler">
+                <span class="navbar-toggler-bar bar1"></span>
+                <span class="navbar-toggler-bar bar2"></span>
+                <span class="navbar-toggler-bar bar3"></span>
+              </button>
+            </div>
+            <a class="navbar-brand" href="javascript:;" style="font-size: 30px; margin-top: 10px;">Patient Home</a>
+          </div>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-bar navbar-kebab"></span>
+            <span class="navbar-toggler-bar navbar-kebab"></span>
+            <span class="navbar-toggler-bar navbar-kebab"></span>
+          </button>
+         
+        </div>
+      </nav>
+      <br> <br>
+      <!-- End Navbar -->
+      <div class="content">
+        <div class="row" >  
+          <div class="col-lg-3 col-md-6 col-sm-6" >
+            <div class="card card-stats">
+              <a href="doctor_list" class="button_slide slide_down">
+              <div class="card-body " >
+                <div class="row">
+                  <div class="col-5 col-md-4">
+                    <div class="icon-big text-center icon-warning">
+                      <i class="fas fa-list-ul" style="color: rgb(230, 93, 13);"></i>
+                    </div>
+                  </div>
+                  <div class="col-7 col-md-8">
+                    <div class="numbers">
+                      <p class="card-title"style="font-size: 18px;color: black;">Doctor List<p>
+                        <p class="card-category" style="font-size: 14px;">View a list of available doctors</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-6" >
+            <div class="card card-stats">
+              <a href="request_status" class="button_slide slide_down">
+              <div class="card-body " >
+                <div class="row">
+                  <div class="col-5 col-md-4">
+                    <div class="icon-big text-center icon-warning">
+                      <i class="far fa-comment-alt" style="color: rgb(2, 120, 255);"></i>
+                    </div>
+                  </div>
+                  <div class="col-7 col-md-8">
+                    <div class="numbers">
+                      <p class="card-title" style="font-size: 18px;color: black;">Request Status<p>
+                        <p class="card-category" style="font-size: 14px;">Acceptance status of your reques</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-6" >
+            <div class="card card-stats">
+              <a href="weekly_analysis" class="button_slide slide_down">
+              <div class="card-body " >
+                <div class="row">
+                  <div class="col-5 col-md-4">
+                    <div class="icon-big text-center icon-warning">
+                      <i class="far fa-chart-bar" style="color: rgb(8, 138, 25);"></i>
+                    </div>
+                  </div>
+                  <div class="col-7 col-md-8">
+                    <div class="numbers">
+                      <p class="card-title" style="font-size: 18px;color: black;">Weekly Analysis<p>
+                        <p class="card-category" style="font-size: 14px;">Look at your weekly mood analysis</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-6" >
+            <div class="card card-stats">
+              <a href="voice_notes" class="button_slide slide_down">
+              <div class="card-body " >
+                <div class="row">
+                  <div class="col-5 col-md-4">
+                    <div class="icon-big text-center icon-warning">
+                      <i class="fas fa-microphone-alt" style="color: rgb(245, 3, 164);"></i>
+                    </div>
+                  </div>
+                  <div class="col-7 col-md-8">
+                    <div class="numbers">
+                      <p class="card-title" style="font-size: 18px;color: black;">Send Voice Notes<p>
+                        <p class="card-category" style="font-size: 14px;">Send voice notes to your doctors</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+            </div>
+          </div>
+
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div class="card">
+            <!-- <div class="card-header">
+              <h4 class="card-title" style="font-family: signika;">Listen to these audios to calm your mind !</h4>
+            </div> -->
+            <div class="card-body">
+              <div class="table-responsive">
+                <table class="table">
+                  <thead class=" text-primary">
+                    <th style="text-align: center; ">
+                    </th>
+                    <th style="text-align: center;">
+                      Your daily dose of motivation !
+                    </th>
+                    <th style="text-align: center;">
+                    </th>
+                    
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td style="text-align: center;">
+                        <h3>Motivational Videos</h3>  
+                        <div id="myCarousel" class="carousel slide" data-ride="carousel" >
+                          <!-- Indicators -->
+                          <ol class="carousel-indicators">
+                            <li data-target="#myCarousel" data-slide-to="0" class="active" ></li>
+                            <li data-target="#myCarousel" data-slide-to="1"></li>
+                            <li data-target="#myCarousel" data-slide-to="2"></li>
+                            <li data-target="#myCarousel" data-slide-to="3"></li>
+                            <li data-target="#myCarousel" data-slide-to="4"></li>
+                          </ol>
+                      
+                          <!-- Wrapper for slides -->
+                          <div class="carousel-inner" >
+                          
+                            <div class="item active">
+                              <iframe width="350" height="250" src="https://www.youtube.com/embed/1eCqV1_7iQ4">
+                              </iframe>
+                            </div>
+                      
+                            <div class="item">
+                              <iframe width="350" height="250" src="https://www.youtube.com/embed/Hd05kpKaYr8">
+                              </iframe>
+                            </div>
+                          
+                            <div class="item">
+                              <iframe width="350" height="250" src="https://www.youtube.com/embed/MEGSiX0JA-s">
+                              </iframe>
+                            </div>
+          
+                            <div class="item">
+                              <iframe width="350" height="250" src="https://www.youtube.com/embed/UF8uR6Z6KLc">
+                              </iframe>
+                            </div>
+          
+                            <div class="item">
+                              <iframe width="350" height="250" src="https://www.youtube.com/embed/9XGekkdAIrk">
+                              </iframe>
+                            </div>
+                          </div>
+          
+                      
+                          <!-- Left and right controls -->
+                          <!-- <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left"></span>
+                            <span class="sr-only">Previous</span>
+                          </a>
+                          <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right"></span>
+                            <span class="sr-only">Next</span>
+                          </a> -->
+                        
+                      </div>              
+                    </div>
+                  
+                    
+                      </td>
+                      <td style="text-align: center;">
+                        <h3>Videos only for you</h3>  
+          <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#myCarousel" data-slide-to="1"></li>
+              <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+        
+            <div class="carousel-inner" >
+
+
+             
+              <div class="item active">
+                <iframe width="350" height="250" src="{{yt_links[0]}}">
+                </iframe>
+              </div>
+
+              <div class="item">
+                <iframe width="350" height="250" src="{{yt_links[1]}}">
+                </iframe>
+              </div>
+
+              <div class="item">
+                <iframe width="350" height="250" src="{{yt_links[2]}}">
+                </iframe>
+              </div>
+        
+            <!-- <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+              <span class="glyphicon glyphicon-chevron-left"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" data-slide="next">
+              <span class="glyphicon glyphicon-chevron-right"></span>
+              <span class="sr-only">Next</span>
+            </a> -->
+            
+          </div>
+
+                       </td>
+                      <td style="text-align: center;">
+                          <h3>Meditation Music</h3>  
+                          <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                            <ol class="carousel-indicators">
+                              <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                              <li data-target="#myCarousel" data-slide-to="1"></li>
+                              <li data-target="#myCarousel" data-slide-to="2"></li>
+                            </ol>
+                        
+                            <div class="carousel-inner" >
+                            
+                              <div class="item active">
+                                <iframe  width="350" height="250" src="https://www.youtube.com/embed/fBVJoIbNjdQ">
+                                </iframe>
+                              </div>
+                        
+                              <div class="item">
+                                <iframe  width="350" height="250" src="https://www.youtube.com/embed/y7e-GC6oGhg">
+                                </iframe>
+                              </div>
+                            
+                              <div class="item">
+                                <iframe width="350" height="250" src="https://www.youtube.com/embed/eXbt6B7GloE">
+                                </iframe>
+                              </div>
+                            </div>
+                        
+                            <!-- <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                              <span class="glyphicon glyphicon-chevron-left"></span>
+                              <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                              <span class="glyphicon glyphicon-chevron-right"></span>
+                              <span class="sr-only">Next</span>
+                            </a> -->
+                          </div>
+                      </td>
+                    </tr>
+                    
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+
+        </div>          
+        <br> <br> <br> 
+        <h3></h3>  
+        <br>
+        <!-- <div class="content"> -->
+          <!-- <div class="row"> -->
+              <div class="col-md-12">
+                <div class="card">
+                  <div class="card-header">
+                    <h4 class="card-title" style="font-family: signika;">Listen to these audios to calm your mind !</h4>
+                  </div>
+                  <div class="card-body">
+                    <div class="table-responsive">
+                      <table class="table">
+                        <thead class=" text-primary">
+                          <th style="text-align: center;">
+                           Audio
+                          </th>
+                          <th style="text-align: center;">
+                           Play
+                          </th>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td style="text-align: center;">
+                             Relaxation Music 1
+                            </td>
+                          
+                            <td style="text-align: center;">
+                              <audio controls>
+                                
+                                <source src="/static/1.mp3" type="audio/mpeg">
+                              </audio>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td style="text-align: center;">
+                              Relaxation Music 2
+                            </td>
+                          
+                            <td style="text-align: center;">
+                              <audio controls>
+                                
+                                <source src="/static/2.mp3" type="audio/mpeg">
+                              </audio>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td style="text-align: center;">
+                              Relaxation Music 3
+                            </td>
+                          
+                            <td style="text-align: center;">
+                              <audio controls>
+                                
+                                <source src="/static/3.mp3" type="audio/mpeg">
+                              </audio>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+
+
+              </div>             
+      
+  <!--   Core JS Files   -->
+  <script src="../assets/js/core/jquery.min.js"></script>
+  <script src="../assets/js/core/popper.min.js"></script>
+  <script src="../assets/js/core/bootstrap.min.js"></script>
+  <script src="../assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+  <!--  Google Maps Plugin    -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+  <!-- Chart JS -->
+  <script src="../assets/js/plugins/chartjs.min.js"></script>
+  <!--  Notifications Plugin    -->
+  <script src="../assets/js/plugins/bootstrap-notify.js"></script>
+  <!-- Control Center for Now Ui Dashboard: parallax effects, scripts for the example pages etc -->
+  <script src="../assets/js/paper-dashboard.min.js?v=2.0.1" type="text/javascript"></script><!-- Paper Dashboard DEMO methods, don't include it in your project! -->
+  <script src="../assets/demo/demo.js"></script>
+  <script>
+    $(document).ready(function() {
+      // Javascript method's body can be found in assets/assets-for-demo/js/demo.js
+      demo.initChartsPages();
+    });
+  </script>
+</body>
+
+</html>
