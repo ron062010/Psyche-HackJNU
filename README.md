@@ -24,10 +24,16 @@ Doctor Interface:
 
 Tech Stack :
 Frontend : HTML, CSS, JavaScript
+
 Backend : Flask (Python)
+
 Deep Learning : Convolutional Neural Network
+
 Model integration with : OpenCV 
+
 Personalized Reccomendation : Natural Language Processing
+
 Web Scraping : Selenium Bot
+
 Payment : Razorpay Integration
 
